@@ -6,6 +6,7 @@ public class BirdScript : MonoBehaviour
     public float flapStrength;
     public bool birdIsAlive = true;
     public LogicScript logicScript;
+    public WingScript wing;
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
@@ -18,7 +19,8 @@ public class BirdScript : MonoBehaviour
     {
         if(Input.GetKeyDown(KeyCode.Space) && birdIsAlive)
         {
-            birdRigidBody.linearVelocity = Vector2.up * flapStrength ;
+            birdRigidBody.linearVelocity = Vector2.up * flapStrength;
+            wing.flapWing();
         }
 
     }
