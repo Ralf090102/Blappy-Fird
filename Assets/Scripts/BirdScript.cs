@@ -28,14 +28,19 @@ public class BirdScript : MonoBehaviour
 
     }
 
-    private void OnCollisionEnter2D(Collision2D collision)
+    public void birdDead()
     {
-        if (audioSource != null && gameOverSound != null)
+        if (audioSource != null && gameOverSound != null && birdIsAlive)
         {
             audioSource.PlayOneShot(gameOverSound);
         }
 
-            logicScript.gameOver();
+        logicScript.gameOver();
         birdIsAlive = false;
+    }
+
+    private void OnCollisionEnter2D(Collision2D collision)
+    {
+        birdDead();
     }
 }

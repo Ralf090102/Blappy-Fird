@@ -19,8 +19,7 @@ public class DeadZoneScript : MonoBehaviour
     {
         if (collision.gameObject.layer == 3 && birdScript.birdIsAlive)
         {
-            birdScript.birdIsAlive = false;
-            birdScript.logicScript.gameOver();
+            birdScript.birdDead();
         }
     }
 }
