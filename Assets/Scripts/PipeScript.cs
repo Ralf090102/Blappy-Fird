@@ -3,8 +3,8 @@ using UnityEngine;
 public class PipeScript : MonoBehaviour
 {
 
-    public float moveSpeed = 5;
-    public float deadZone = -25;
+    public float pipeSpeed = 5;
+    public float deadZone = -40;
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
@@ -20,6 +20,11 @@ public class PipeScript : MonoBehaviour
             Destroy(gameObject);
         }
 
-        transform.position = transform.position + (Vector3.left * moveSpeed) * Time.deltaTime;
+        moveObject();
+    }
+
+    protected virtual void moveObject()
+    {
+        transform.position = transform.position + (Vector3.left * pipeSpeed) * Time.deltaTime;
     }
 }
