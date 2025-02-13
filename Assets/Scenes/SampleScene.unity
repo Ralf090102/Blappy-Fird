@@ -275,7 +275,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   cloud: {fileID: 6913687043428645915, guid: 05766e17aba2f5d42ad9d1c1008b0215, type: 3}
-  spawnRate: 0.75
+  spawnRate: 1.5
   heightOffset: 20
 --- !u!4 &351510687
 Transform:
