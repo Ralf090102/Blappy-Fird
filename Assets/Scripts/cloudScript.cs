@@ -1,16 +1,11 @@
 using UnityEngine;
 
-public class cloudScript : MonoBehaviour
+public class CloudScript : PipeScript
 {
-    // Start is called once before the first execution of Update after the MonoBehaviour is created
-    void Start()
-    {
-        
-    }
+    public float cloudSpeed = 10;
 
-    // Update is called once per frame
-    void Update()
+    protected override void moveObject()
     {
-        
+        transform.position = transform.position + (Vector3.left * cloudSpeed) * Time.deltaTime;
     }
 }
